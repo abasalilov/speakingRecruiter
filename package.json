@@ -12,8 +12,8 @@
     "test": "mocha server/spec/server-spec.js; RES=$?; kill %1; exit $RES",
     "start": "node app.js",
     "seedDB": "mysql --host=us-cdbr-iron-east-04.cleardb.net --user=bc043778af10a6 --password=15d711f2 --reconnect heroku_a8cdd51915a9d36 < schema.sql",
-    "postseedDB": "node worker.js",
-    "postinstall": "webpack -p"
+    "postinstall": "webpack -p",
+    "start1": "webpack-dev-server -d --hot --https --config webpack.config.js"
   },
   "dependencies": {
     "axios": "^0.15.3",

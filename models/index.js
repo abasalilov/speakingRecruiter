@@ -88,7 +88,8 @@ module.exports = {
       });
     },
     post: function (params, callback) {
-      var queryStr = 'insert into questions(questionId, lessonID) values (?, ?)';
+      console.log('params', params)
+      var queryStr = 'insert into questions(q, lessonID) values (?, ?)';
       console.log('models 89 queryStr', queryStr)
       db.query(queryStr, params, function(err, results) {
         callback(err, results);

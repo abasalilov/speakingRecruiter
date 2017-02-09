@@ -45,10 +45,10 @@ export default class QuizForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h4>QUESTION 1: {this.props.questions.questionText}</h4>
+        <h4>QUESTION 1: {}</h4>
         <textarea type="text" value={this.state.answer1} onChange={this.handleChange1.bind(this)}>
         </textarea>
-        <h4>QUESTION 2: {this.props.questions.questionText}</h4>
+        <h4>QUESTION 2: {}</h4>
         <textarea type="text" value={this.state.answer2} onChange={this.handleChange2.bind(this)} >
         </textarea>
         <h4>QUESTION 3: {this.props.questions.questionText}</h4>

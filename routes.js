@@ -20,7 +20,7 @@ router.get('/answers', controller.answers.get);
 
 router.post('/answers', controller.answers.post);
 
-router.get('/questions', controller.question.get);
+router.get('/questions/q', controller.question.get);
 
 router.post('/questions', controller.question.post);
 

@@ -28,48 +28,6 @@ console.log('Server started on', port);
 
 
 
-
-  // request({
-  //   url: 'https://api.knack.com/v1/objects/object_1/records',
-  //   type: 'POST',
-  //   headers: {
-  //       'X-Knack-Application-Id': '5010b4b38eed0a844c0000a9',
-  //       'X-Knack-REST-API-Key': '26cb713e-a350-4139-962d-b3b75958d0d1'
-  //   }, success: function(data) {
-  //     alert('POSTED API RECORDS');
-  //   },
-  //   json: {leads: leads.pipelineLA}, function(err, response, body) {
-  //     if (err) {
-  //       console.log('body inside forloop', body)
-  //       console.error(err);
-  //     }
-  //     if (response) {
-  //       console.log('response', response);
-  //     }
-  //   }
-  // });
-
-// for (var i = 0; i < data.questions.length; i++) {
-//   request({
-//     method: 'POST',
-//     uri: process.env.CLEARDB_DATABASE_URL+'/questions',
-//     json: {
-//       QuestionText1: data.questions[i].QuestionText1,
-//       QuestionText2: data.questions[i].QuestionText2,
-//       QuestionText3: data.questions[i].QuestionText3,
-//       lessonID: data.questions[i].lessonID
-//     }, function(err, response, body) {
-//       if (err) {
-//         console.error(err);
-//         console.log(err);
-//       }
-//       if (response) {
-//         console.log('response', response);
-//       }
-//     }
-//   });
-// }
-
 console.log('run through seeding the db');
 module.exports.app = app;
 

@@ -5,18 +5,18 @@ module.exports = {
 
   lessons: {
     get: function (req, res) {
-    console.log('inside lessons in controller')
+    // console.log('inside lessons in controller')
       models.lessons.get(function(err, results) {
-        console.log('req lessons get2', results)
+        // console.log('req lessons get2', results)
         if (err) { console.error(err) }
         res.json(results);
       });
     },
     post: function (req, res) {
-      console.log(req.body)
+      // console.log(req.body)
       var params = [req.body.Title, req.body.Summary, req.body.Content];
       models.lessons.post(params, function(err, results) {
-        console.log('results', results)
+        // console.log('results in post lessons', results)
         if (err) { console.error(err) }
         res.sendStatus(201);
       });
@@ -66,15 +66,18 @@ module.exports = {
       console.log('question controller 66 req', req)
       models.questions.get(function(err, results) {
         if (err) { console.error(err) }
-        res.json(results);
+          if (results){
+          console.log('res inside controller 69', res)
+          console.log('results inside controller 692', results)
+          res.json(results);
+          }
       });
     },
     post: function (req, res) {
       // console.log('req.body', req)
-      var params = [req.body.questionText, req.body.lessonId];
-      console.log('params in controller 75', params)
+      var params = [req.body.q, req.body.lessonId];
+      console.log('params in controller 79', params)
       models.questions.post(params, function(err, results) {
-        console.log('results', results)
         if (err) { console.error(err) }
         res.sendStatus(201);
       })
@@ -85,8 +88,6 @@ module.exports = {
   login: {
     get: function (req, res) {
       var params = [req.body.Username, req.body.password];
-      console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~req', req);
-      console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~res', res)
       models.users.get(params, function(err, results) {
         if (err) { console.error(err) }
         res.json(results);

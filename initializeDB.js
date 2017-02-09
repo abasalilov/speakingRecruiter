@@ -17,13 +17,13 @@ const lessons = [
 
 
 const questions = [
-{questionText: 'Question1, lesson 1', questiontext: 'Question1, lesson 1', lessonId: 21},
-{questionText: 'Question2, lesson 2', lessonId: 31},
-{questionText: 'Question3, lesson 3', lessonId: 33},
-{questionText: 'Question4, lesson 4', lessonId: 42},
-{questionText: 'Question5, lesson 5', lessonId: 52},
-{questionText: 'Question6, lesson 6', lessonId: 62},
-{questionText: 'Question7, lesson 7', lessonId: 72},
-{questionText: 'Question8, lesson 8', lessonId: 82}
+{q: 'Question1, lesson 1', q: 'Question1, lesson 1', lessonId: 222},
+{q: 'Question2, lesson 2', lessonId: 322},
+{q: 'Question3, lesson 3', lessonId: 38},
+{q: 'Question4, lesson 4', lessonId: 2222},
+{q: 'Question5, lesson 5', lessonId: 522},
+{q: 'Question6, lesson 6', lessonId: 622},
+{q: 'Question7, lesson 7', lessonId: 722},
+{q: 'Question8, lesson 8', lessonId: 822}
 ];
 module.exports = {pipelineLA: pipelineLA, lessons: lessons, questions: questions, pipelineNYC: pipelineNYC, pipelineAustin: pipelineAustin};

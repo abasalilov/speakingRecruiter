@@ -1,4 +1,5 @@
 import { FETCH_LESSONS, FETCH_QUIZ, LESSON_SELECTED } from './types';
+import axios from 'axios';
 
 export function fetchLessons() {
     let theHeaders = new Headers({ "Content-Type": "application/json" });
@@ -11,12 +12,11 @@ export function fetchLessons() {
 }
 
 export function fetchQuiz() {
-    let theHeaders = new Headers({ "Content-Type": "application/json" });
-    const request = fetch('/questions', { method: 'GET', headers: theHeaders})
-
+  console.log('inscide payload')
+    const request2 = axios.get('/questions/q')
   return {
     type: FETCH_QUIZ,
-    payload: request
+    payload: request2
   };
 }
 

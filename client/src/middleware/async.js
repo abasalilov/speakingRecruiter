@@ -6,13 +6,20 @@ export default function({ dispatch }) {
     }
 
     action.payload
-    .then(function(response) {
+    .then(function(response, err) {
+      if(response.request === undefined){
       response.json()
-      .then(r => {
-
+      .then(function(r,e) {
+        console.log('r',r);
+        console.log('e',e)
         const newAction = {...action, payload: r };
         dispatch(newAction);
       })
+      } else {
+        console.log('stringify', JSON.parse(response.request.responseText) )
+        const newAction = {...action, payload: JSON.parse(response.request.responseText) };
+        dispatch(newAction);
+      }
     })
   }
 }

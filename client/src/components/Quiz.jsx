@@ -13,7 +13,7 @@ class Quiz extends React.Component {
   }
 
   componentWillMount(){
-    this.props.fetchQuiz()
+    console.log('this.props', this.props.quiz)
   }
 
   componentDidMount() {
@@ -22,7 +22,7 @@ class Quiz extends React.Component {
   renderQuiz(questions){
     return (
     <div>
-    <QuizForm questions={questions}/>
+    <QuizForm questions={this.props.quiz}/>
     </div>
     )
   }
@@ -30,6 +30,7 @@ class Quiz extends React.Component {
 
   retrieveQuizData() {
     this.setState({quizStarted: true})
+    console.log(this.props)
     let num = this.props.quizNum
     let list = this.props.quiz.slice(0,8);
     let q = null;

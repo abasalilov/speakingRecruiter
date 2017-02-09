@@ -16,10 +16,12 @@ class LessonList extends Component {
 
   componentWillMount() {
     this.props.fetchLessons();
+        this.props.fetchQuiz();
   }
 
   componentDidMount(){
-
+    console.log('this.sate', this.state);
+    console.log('this.props in lesson-list', this.props)
   }
 
   createLesson(){
@@ -66,7 +68,7 @@ renderHeader(){
 }
 
 function mapStateToProps(state) {
-  return { lessons: state.lessons };
+  return { lessons: state.lessons, questions: state.questions};
 }
 
 export default connect(mapStateToProps, actions)(LessonList);
