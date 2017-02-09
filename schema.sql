@@ -40,9 +40,9 @@ CREATE TABLE lessons
 DROP TABLE IF EXISTS questions;
 CREATE TABLE questions
              (
-                          questionId INTEGER auto_increment DEFAULT NULL,
-                          questiontext VARCHAR(10000) NULL DEFAULT NULL,
-                          lessonid VARCHAR(100) NULL DEFAULT NULL,
+                          questionId          INTEGER         auto_increment   NOT NULL,
+                          questionText VARCHAR(1000) NULL DEFAULT NULL,
+                          lessonId VARCHAR(10000) NULL DEFAULT NULL,
                           PRIMARY KEY (questionId)
              );
 

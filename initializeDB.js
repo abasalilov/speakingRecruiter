@@ -14,14 +14,16 @@ const lessons = [
 {Title: 'lesson 8', Summary: '360 Management', Content: 'Write this section out'}
 ];
 
+
+
 const questions = [
-{questionText: 'Question1, lesson 1', lessonId: 1},
-{questionText: 'Question2, lesson 2', lessonId: 2},
-{questionText: 'Question3, lesson 3', lessonId: 3},
-{questionText: 'Question4, lesson 4', lessonId: 4},
-{questionText: 'Question5, lesson 5', lessonId: 5},
-{questionText: 'Question6, lesson 6', lessonId: 6},
-{questionText: 'Question7, lesson 7', lessonId: 7},
-{questionText: 'Question8, lesson 8', lessonId: 8}
+{questionText: 'Question1, lesson 1', questiontext: 'Question1, lesson 1', lessonId: 21},
+{questionText: 'Question2, lesson 2', lessonId: 31},
+{questionText: 'Question3, lesson 3', lessonId: 33},
+{questionText: 'Question4, lesson 4', lessonId: 42},
+{questionText: 'Question5, lesson 5', lessonId: 52},
+{questionText: 'Question6, lesson 6', lessonId: 62},
+{questionText: 'Question7, lesson 7', lessonId: 72},
+{questionText: 'Question8, lesson 8', lessonId: 82}
 ];
 module.exports = {pipelineLA: pipelineLA, lessons: lessons, questions: questions, pipelineNYC: pipelineNYC, pipelineAustin: pipelineAustin};

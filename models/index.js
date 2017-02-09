@@ -83,7 +83,7 @@ module.exports = {
       var queryStr = 'select * from questions';
       console.log('models 82 queryStr', queryStr)
       db.query(queryStr, function(err, results) {
-        console.log(results)
+        console.log('results from questions', results)
         callback(err, results);
       });
     },

@@ -63,21 +63,23 @@ module.exports = {
 
   question: {
     get: function (req, res) {
+      console.log('question controller 66 req', req)
       models.questions.get(function(err, results) {
         if (err) { console.error(err) }
         res.json(results);
       });
     },
     post: function (req, res) {
-      console.log('controller params line 72', req.body)
+      // console.log('req.body', req)
       var params = [req.body.questionText, req.body.lessonId];
+      console.log('params in controller 75', params)
       models.questions.post(params, function(err, results) {
-        console.log('results in line 75 questions controller post 53', results)
+        console.log('results', results)
         if (err) { console.error(err) }
         res.sendStatus(201);
-      });
-    }
-  },
+      })
+  }
+},
 
 
   login: {
@@ -113,7 +115,7 @@ module.exports = {
       console.log('controller params line 48', req.body)
       var params = [req.body.Usernamem, req.body.password];
       models.questions.post(params, function(err, results) {
-        console.log('results in line 72 answers controller post 53', results)
+        console.log('results in line 116 answers controller post 53', results)
         if (err) { console.error(err) }
         res.sendStatus(201);
       });
@@ -131,7 +133,7 @@ module.exports = {
       console.log('controller params line 48', req.body)
       var params = [req.body.Usernamem, req.body.password];
       models.questions.post(params, function(err, results) {
-        console.log('results in line 72 answers controller post 53', results)
+        console.log('results in line 134 answers controller post 53', results)
         if (err) { console.error(err) }
         res.sendStatus(201);
       });
